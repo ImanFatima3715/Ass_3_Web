@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect Pakistan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">EduConnect Pakistan</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#student">Students</a></li>
+            <li><a href="#tutor">Tutors</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><a href="#auth">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to EduConnect Pakistan</h1>
+        <p>Connecting students with expert tutors</p>
+        <a href="#auth" class="btn">Get Started</a>
+    </section>
+
+    <!-- Student Section -->
+    <section id="student" class="section">
+        <h2>For Students</h2>
+
+        <h3>🔍 Search & Book Tutors</h3>
+        <input type="text" id="searchTutors" placeholder="Search tutors..." onkeyup="searchTutors()">
+        <div id="tutors-container"></div>
+
+        <h3>📅 Book a Session</h3>
+        <form id="booking-form">
+            <input type="text" id="tutorId" placeholder="Enter Tutor ID" required>
+            <input type="text" id="studentName" placeholder="Your Name" required>
+            <input type="datetime-local" id="sessionTime" required>
+            <button type="submit">Book Now</button>
+        </form>
+
+        <h3>⭐ Review & Rate Tutors</h3>
+        <form id="review-form">
+            <input type="text" id="reviewTutorId" placeholder="Tutor ID" required>
+            <input type="text" id="reviewerName" placeholder="Your Name" required>
+            <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+            <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <h3>❤️ Wishlist</h3>
+        <ul id="wishlist-container">
+            <li>No tutors added to wishlist yet.</li>
+        </ul>
+    </section>
+
+    <!-- Tutor Section -->
+    <section id="tutor" class="section">
+        <h2>For Tutors</h2>
+
+        <h3>🖊 Manage Your Profile</h3>
+        <form id="tutor-profile-form">
+            <input type="text" id="tutorName" placeholder="Full Name" required>
+            <input type="text" id="specialization" placeholder="Subject Specialization" required>
+            <textarea id="bio" placeholder="Your Bio" required></textarea>
+            <input type="text" id="availability" placeholder="Available Days & Time" required>
+            <button type="submit">Update Profile</button>
+        </form>
+
+        <h3>📆 Accept or Decline Session Requests</h3>
+        <div id="session-requests-container">
+            <ul id="session-requests">
+                <li>No new session requests.</li>
+            </ul>
+            <button onclick="acceptSession()">Accept Selected</button>
+            <button onclick="declineSession()">Decline Selected</button>
+        </div>
+
+        <h3>💰 Track Your Earnings</h3>
+        <button onclick="viewEarnings()">View Earnings</button>
+        <p id="earnings">Earnings data will be displayed here.</p>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="section">
+        <h2>Admin Dashboard</h2>
+
+        <h3>✔ Verify Tutor Profiles</h3>
+        <div id="tutor-verification">
+            <ul id="pending-tutors">
+                <li>No pending tutors.</li>
+            </ul>
+            <button onclick="approveTutors()">Approve Selected Tutors</button>
+        </div>
+
+        <h3>📊 View Reports & Statistics</h3>
+        <button onclick="viewReports()">View Reports</button>
+        <p id="report-data">Reports will be displayed here.</p>
+    </section>
+
+    <!-- Authentication Section -->
+    <section id="auth" class="auth">
+        <h2>Login / Register</h2>
+        <form id="authForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p id="authMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 EduConnect Pakistan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

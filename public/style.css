@@ -1,0 +1,297 @@
+/* ✅ General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ✅ Navbar */
+.navbar {
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* ✅ Hero Section */
+.hero {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: white;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* ✅ Sections */
+.section {
+    padding: 50px;
+    background: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* ✅ Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* ✅ Tutors & Wishlist */
+#tutors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tutor-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.tutor-card h3 {
+    margin-bottom: 10px;
+}
+
+.tutor-card button {
+    background: #ff3b30;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tutor-card button:hover {
+    background: #c62828;
+}
+
+/* ✅ Wishlist */
+#wishlist-container {
+    list-style: none;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+#wishlist-container li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ✅ Session Requests */
+#session-requests-container {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+#session-requests li {
+    padding: 10px;
+    background: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accept-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.accept-btn:hover {
+    background: #218838;
+}
+
+.decline-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.decline-btn:hover {
+    background: #c82333;
+}
+
+/* ✅ Authentication */
+.auth {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+}
+
+.auth input {
+    width: 100%;
+}
+
+.auth .btn {
+    width: 100%;
+}
+
+/* ✅ Admin Section */
+#report-data {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    text-align: center;
+}
+
+/* ✅ Footer */
+footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .section {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .auth {
+        width: 90%;
+    }
+}
